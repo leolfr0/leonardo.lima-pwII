@@ -34,10 +34,19 @@ function AreaTriangulo(){
 
 function AreaQuadrado(){
     if (n1.value==0){
-        resultado.innerHTML="Erro: não é possível fazer área por 0"
+        resultado.innerHTML="Erro: não é possível fazer área por 0";
     }
     else{
         resultado.innerHTML=n1.value*n1.value;
+    }
+}
+
+function ParImpar(){
+    if (n1.value%2==0){
+        resultado.innerHTML="O número é par";
+    }
+    else{
+        resultado.innerHTML="O número é ímpar";
     }
 }
 

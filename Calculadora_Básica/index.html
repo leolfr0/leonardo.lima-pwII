@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Calculadora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<div class="calculadora"><center>
     <h1>Minha Calculadora</h1>
     Primeiro número<br>
     <input type="number" id="n1"><br>
@@ -17,13 +23,16 @@
     <button onclick="dividir()">Dividir</button>
     <button onclick="AreaTriangulo()">Área do triângulo</button>
     <button onclick="AreaQuadrado()">Área do quadrado</button>
-    <br>
-    O resultado é <span id="resultado"></span><br><br><br>
+    <button onclick="ParImpar()">Verificar se é par ou ímpar</button>
+    <br><br>
+    O resultado é: <span id="resultado"></span>
+</div></center>
 
     <footer><center>
-        Feito por Leonardo Lima de Freitas
+        <br><br>&copy; Feito por Leonardo Lima de Freitas
     </center></footer>
 
     <script src="js/calculo.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </body>
 </html>
