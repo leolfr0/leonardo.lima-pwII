@@ -22,3 +22,29 @@ function dividir() {
         resultado.innerHTML=Number(n1.value)/Number(n2.value);
     }
 }
+
+function AreaTriangulo(){
+    if(n1.value==0 || n2.value==0){
+        resultado.innerHTML="Erro: não é possível fazer área por 0";
+    }
+    else{
+        resultado.innerHTML=(n1.value*n2.value)/2;
+    }
+}
+
+function AreaQuadrado(){
+    if (n1.value==0){
+        resultado.innerHTML="Erro: não é possível fazer área por 0"
+    }
+    else{
+        resultado.innerHTML=n1.value*n1.value;
+    }
+}
+
+var idade=prompt("Insira sua idade.");
+if (idade<18){
+    console.log("Menor de idade");
+}
+else{
+    console.log("Maior de idade");
+}
