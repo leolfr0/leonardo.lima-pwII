@@ -17,13 +17,25 @@
     <input type="number" id="n1"><br>
     Segundo Número<br>
     <input type="number" id="n2"><br><br>
-    <button onclick="somar()">Somar</button>
-    <button onclick="subtrair()">Subtrair</button>
-    <button onclick="multiplicar()">Multiplicar</button>
-    <button onclick="dividir()">Dividir</button>
-    <button onclick="AreaTriangulo()">Área do triângulo</button>
-    <button onclick="AreaQuadrado()">Área do quadrado</button>
-    <button onclick="ParImpar()">Verificar se é par ou ímpar</button>
+    
+    <label for="opcoes">Opções de cálculos:</label>
+    <select name="opcoes" id="opcoes">
+        <option value="operacoesBasicas">Operações Básicas</option>
+        <option value="area">Operações de área</option>
+        <option value="venda">Operações de venda</option>
+    </select><br><br><br>
+
+    <button onclick="somar()" id="soma">Somar</button>
+    <button onclick="subtrair()" id="subtrair">Subtrair</button>
+    <button onclick="multiplicar()" id="multiplicar">Multiplicar</button>
+    <button onclick="dividir()" id="dividir">Dividir</button>
+    <button onclick="parImpar()" id="parImpar">Verificar se é par ou ímpar</button>
+    <button onclick="areaTriangulo()" id="areaTriangulo">Área do triângulo</button>
+    <button onclick="areaQuadrado()" id="areaQuadrado">Área do quadrado</button>
+    <button onclick="menos10Porcento()" id="menos10Porcento">Retirar 10% do primeiro número</button>
+    <button onclick="menos3Porcento()" id="menos3Porcento">Retirar 3% do primeiro número</button>
+    <button onclick="lucro15Porcento()" id="lucro15Porcento">Adicionar 15% do valor do primeiro número</button>
+    <button onclick="venda()" id="venda">Calcular valor para venda</button>
     <br><br>
     O resultado é: <span id="resultado"></span>
 </div></center>
