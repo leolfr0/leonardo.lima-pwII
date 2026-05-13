@@ -2,6 +2,51 @@ var n1 = document.querySelector("#n1");
 var n2 = document.querySelector("#n2");
 var resultado = document.querySelector("#resultado");
 var select = document.getElementById("opcoes");
+var btnSomar = document.getElementById("somar");
+var btnSubtrair = document.getElementById("subtrair");
+var btnMultiplicar = document.getElementById("multiplicar");
+var btnDividir = document.getElementById("multiplicar");
+var btnParImpar = document.getElementById("parImpar");
+var btnAreaTriangulo = document.getElementById("areaTriangulo");
+var btnAreaQuadrado = document.getElementById("areaQuadrado");
+var btn10Porcento = document.getElementById("menos10Porcento");
+var btn3Porcento = document.getElementById("menos3Porcento");
+var btn15Porcento = document.getElementById("lucro15Porcento");
+var btnVenda = document.getElementById("venda");
+
+select.addEventListener("change", function () {
+    btnSomar.style.display="none";
+    btnSubtrair.style.display="none";
+    btnMultiplicar.style.display="none";
+    btnDividir.style.display="none";
+    btnParImpar.style.display="none";
+    btnAreaTriangulo.style.display="none";
+    btnAreaQuadrado.style.display="none";
+    btn10Porcento.style.display="none";
+    btn3Porcento.style.display="none";
+    btn15Porcento.style.display="none";
+    btnVenda.style.display="none";
+
+    if (select.value==="operacoesBasicas"){
+        btnSomar.style.display="inline-block";
+        btnSubtrair.style.display="inline-block";
+        btnMultiplicar.style.display="inline-block";
+        btnDividir.style.display="inline-block";
+        btnParImpar.style.display="inline-block";
+    }
+
+    if (select.value==="area"){
+        btnAreaTriangulo.style.display="inline-block";
+        btnAreaQuadrado.style.display="inline-block";
+    }
+
+    if (select.value==="venda"){
+        btn10Porcento.style.display="inline-block";
+        btn3Porcento.style.display="inline-block";
+        btn15Porcento.style.display="inline-block";
+        btnVenda.style.display="inline-block";
+    }
+})
 
 function somar() {
     resultado.innerHTML = Number(n1.value)+Number(n2.value);
