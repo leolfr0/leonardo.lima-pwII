@@ -1,5 +1,5 @@
 body{
-    background-color: #607466;
+    background-color: #fefedf;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -11,19 +11,57 @@ h1 {
 }
 
 header {
-    background: #c8e6d1;
+    background: #00c9a7;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
 }
 
-table{
+.produtos table{
     margin: 180px auto 0 auto;
-    border: 1px, solid, red;
+    background-color: #b39cd0;
+    border-radius: 2.5%;
+    border-spacing: 0px;
+    overflow: hidden;
 }
 
-tr, td, th{
-    border: 1px, solid, red;
+.produtos tr, .produtos td, .produtos th{
     padding: 0.5em;
+    border: 1px solid black;
+}
+
+.subtotal table{
+    margin: 17px auto 0 auto;
+    padding: 0.5em;
+    background-color: #b39cd0;
+    border-radius: 2.5%;
+}
+
+#produto1Rem, #produto2Rem, #produto3Rem{
+    font-family: "Climate Crisis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "YEAR" 1979;
+    background-color: red;
+    color: #fefedf;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    padding: 6px;
+}
+
+#produto1Add, #produto2Add, #produto3Add{
+    font-family: "Climate Crisis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "YEAR" 1979;
+    background-color: green;
+    color: #fefedf;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    padding: 6px;
 }
