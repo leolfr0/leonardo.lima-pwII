@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camargo Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/camargo_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;Camargo Store</h1>
+    </header>
+
+    <table>
+        <tr>
+            <th>Imagem</th>
+            <th>Produto</th>
+            <th>Preço Unitário</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td><img src="img/xbox_seriesx.jpg" width="175"></td>
+            <td><center>Console Xbox Series X - 1TB<br>Preto</center></td>
+            <td><b><center><span id="valorProduto1"></span></center></b></td>
+            <td><center><button onclick="removerUnidProduto(this)" id="produto1Rem">-</button>
+                <span id="unidProduto1">0</span>
+                <button onclick="adicionarUnidProduto(this)" id="produto1Add">+</button></center></td>
+            <td><center><b>R$<span id="totalProduto1">0</span></b></center></td>
+        </tr>
+        <tr>
+            <td><img src="img/switch2.jpg" width="175"></td>
+            <td><center>Console Nintedo Switch 2 - 256GB<br>Preto</center></td>
+            <td><b><center><span id="valorProduto2"></span></center></b></td>
+            <td><center><button onclick="removerUnidProduto(this)" id="produto2Rem">-</button>
+            <span id="unidProduto2">0</span>
+            <button onclick="adicionarUnidProduto(this)" id="produto2Add">+</button></center></td>
+            <td><center><b>R$<span id="totalProduto2">0</span></b></center></td>
+        </tr>
+        <tr>
+            <td><img src="img/ps5.jpg" width="175"></td>
+            <td><center>Console PlayStation 5 - 825GB<br>Branco</center></td>
+            <td><center><b><span id="valorProduto3"></span></b></center></td>
+            <td><center><button onclick="removerUnidProduto(this)" id="produto3Rem">-</button>
+            <span id="unidProduto3">0</span>
+            <button onclick="adicionarUnidProduto(this)" id="produto3Add">+</button></center></td>
+            <td><center><b>R$<span id="totalProduto3">0</span></b></center></td>
+        </tr>
+    </table>
+
+<script src="js/script.js"></script>
+</body>
+</html>

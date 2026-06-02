@@ -1,0 +1,29 @@
+body{
+    background-color: #607466;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-family: "Birthstone", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 55px;
+}
+
+header {
+    background: #c8e6d1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+table{
+    margin: 180px auto 0 auto;
+    border: 1px, solid, red;
+}
+
+tr, td, th{
+    border: 1px, solid, red;
+    padding: 0.5em;
+}
