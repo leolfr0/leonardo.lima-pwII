@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #111827;
+    color: #1f2937;
+    padding: 50px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    background: #f9fafb;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28);
+}
+
+.header {
+    min-height: 110px;
+    padding: 28px 32px;
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header span {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+button {
+    font-family: inherit;
+}
+
+#new {
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.14);
+    color: white;
+    padding: 11px 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#new:hover {
+    background: white;
+    color: #5b21b6;
+}
+
+.divTable {
+    padding: 30px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+thead th {
+    background: transparent;
+    color: #6b7280;
+    text-align: left;
+    padding: 0 16px 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+tbody tr {
+    background: white;
+    box-shadow: 0 4px 14px rgba(17, 24, 39, 0.06);
+}
+
+tbody td {
+    padding: 18px 16px;
+    border-top: 1px solid #eef0f3;
+    border-bottom: 1px solid #eef0f3;
+}
+
+tbody td:first-child {
+    border-left: 1px solid #eef0f3;
+    border-radius: 12px 0 0 12px;
+    font-weight: 600;
+    color: #111827;
+}
+
+tbody td:last-child {
+    border-right: 1px solid #eef0f3;
+    border-radius: 0 12px 12px 0;
+}
+
+tbody tr:hover td {
+    background: #faf7ff;
+}
+
+.acao {
+    width: 70px;
+    text-align: center;
+}
+
+.acao button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.2s;
+}
+
+.edit {
+    background: #f59e0b;
+}
+
+.edit:hover {
+    background: #d97706;
+    transform: scale(1.08);
+}
+
+.delete {
+    background: #ef4444;
+}
+
+.delete:hover {
+    background: #dc2626;
+    transform: scale(1.08);
+}
+
+.modal-container {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(17, 24, 39, 0.72);
+    backdrop-filter: blur(4px);
+    padding: 20px;
+    z-index: 999;
+}
+
+.modal-container.active {
+    display: flex;
+}
+
+.modal {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.modal label {
+    margin-top: 7px;
+    font-size: 13px;
+    color: #374151;
+    font-weight: 600;
+}
+
+.modal input {
+    width: 100%;
+    padding: 13px 14px;
+    background: #f3f4f6;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.modal input:focus {
+    background: white;
+    border-color: #7c3aed;
+}
+
+#btnSalvar {
+    margin-top: 18px;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#btnSalvar:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        border-radius: 16px;
+    }
+
+    .header {
+        min-height: auto;
+        padding: 24px 20px;
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .header span {
+        font-size: 21px;
+    }
+
+    #new {
+        width: 100%;
+    }
+
+    .divTable {
+        padding: 18px;
+    }
+
+    table {
+        min-width: 650px;
+    }
+}
