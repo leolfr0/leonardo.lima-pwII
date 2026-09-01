@@ -1,0 +1,17 @@
+{
+  "name": "apinodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon .index.js localhost 3001"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.9.4",
+    "nodemon": "^3.1.14"
+  }
+}
