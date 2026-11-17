@@ -1,20 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD</title>
+    <title>Cadastro de Funcionários</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-        <span>Cadastro de Funcionários</span>
-        <button onclick="openModal()" id="new">Incluir</button>
-        </div>
+    <main id="login-screen" class="login-screen">
+        <section class="login-card" aria-labelledby="login-title">
+            <h1 id="login-title">Acesso administrativo</h1>
+            <p class="login-intro">Entre para gerenciar o cadastro de funcionários.</p>
+            <form id="login-form">
+                <label for="username">Usuário</label>
+                <input id="username" name="username" type="text" autocomplete="username" required>
+
+                <label for="password">Senha</label>
+                <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+                <button class="btn-login" type="submit">Entrar</button>
+                <p id="login-message" class="login-message" role="alert" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <main id="app" class="app hidden">
+        <section class="container">
+            <header class="header">
+                <span>Cadastro de Funcionários</span>
+                <div class="header-actions">
+                    <button type="button" id="new" class="btn-primary">Incluir</button>
+                    <button type="button" id="logout" class="btn-logout">Sair</button>
+                </div>
+            </header>
+
             <div class="divTable">
                 <table>
                     <thead>
@@ -26,24 +47,31 @@
                             <th class="acao">Excluir</th>
                         </tr>
                     </thead>
-                <tbody>
-                </tbody>
+                    <tbody></tbody>
                 </table>
+                <p id="table-message" class="table-message" aria-live="polite"></p>
             </div>
-        <div class="modal-container">
-            <div class="modal">
-                <form>
+        </section>
+
+        <div class="modal-container" aria-hidden="true">
+            <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <h2 id="modal-title">Funcionário</h2>
+                <form id="employee-form">
                     <label for="m-nome">Nome</label>
-                    <input id="m-nome" type="text" required />
+                    <input id="m-nome" type="text" maxlength="100" required>
                     <label for="m-funcao">Função</label>
-                    <input id="m-funcao" type="text" required />
+                    <input id="m-funcao" type="text" maxlength="100" required>
                     <label for="m-salario">Salário</label>
-                    <input id="m-salario" type="number" required />
-                    <button id="btnSalvar">Salvar</button>
+                    <input id="m-salario" type="number" min="0" step="0.01" required>
+                    <div class="modal-actions">
+                        <button type="button" id="cancel-modal" class="btn-secondary">Cancelar</button>
+                        <button type="submit" id="btnSalvar" class="btn-primary">Salvar</button>
+                    </div>
                 </form>
-            </div>
+            </section>
         </div>
-    </div>
-<script src="script.js"></script>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
